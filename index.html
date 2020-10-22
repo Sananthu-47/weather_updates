@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Updates</title>
+</head>
+
+<body>
+    <!--  Top-part container  -->
+    <div class="container">
+        <!--  Logo wrapper  -->
+        <div class="logo-wraper">
+            <h1 class="weather-logo">WEATHER</h1>
+            <h1 class="updates-logo">UPDATES</h1>
+        </div>
+        <!--  Tagline of the app  -->
+        <p class="tagline">Search for Weather from all around the world</p>
+        <!--  Wrapper for the input-fields  -->
+        <div class="input-wrapper">
+            <input id="input-field" type="text" placeholder="Search for any city weather">
+            <div class="search">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <div class="change-weather">
+            <span>By default the temperature unit is kelvin to change the unit click here </span><i class="fa fa-arrow-right" style="margin: 0 5px;"></i>
+            <div class="select-div">
+            <select id="select">
+                <option value="0" selected="selected">Kelvin</option>
+                <option value="1">Celcius</option>
+                <option value="2">Fahrenheit</option>
+            </select>
+            </div>
+        </div>
+        <!--  SVG waves  -->
+        <div class="svg-wrapper">
+            <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1439 112" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.00001 24.9422V110.942H1442V39.9422C1442 -6.55775 1373.56 73.8619 1327.5 69.9422C1292.61 66.9728 1277.9 37.0516 1243 39.9422C1214.61 42.294 1204.7 65.8833 1176.5 69.9422C1134.66 75.9643 1107.23 15.8427 1072.5 39.9422C1051.69 54.3822 1106 97.4422 1042.5 97.4422C979 97.4422 979 50.4422 979 50.4422C1050 36.9423 977.5 -11.0578 866 24.9422C754.5 60.9422 965.5 24.4422 849.5 60.9422C733.5 97.4422 748.108 64.5458 685.5 50.4422C652.966 43.1133 635.611 14.3161 604 24.9422C580.311 32.9052 582.514 63.0231 558.5 69.9422C523.235 80.1029 476 -3.55778 476 24.9422C476 53.4422 437.115 30.6548 414 39.9422C392.089 48.746 384.638 65.2282 361.5 69.9422C329.991 76.3616 304 14.4422 281.5 50.4422C259 86.4422 237.744 89.6249 209 79.4422C192.828 73.7132 204.5 30.9422 176 50.4422C147.5 69.9422 94.5 118.942 76.5 79.4422C58.5 39.9422 1.00003 -38.5577 1.00001 24.9422Z"
+                    fill="#1CECF9" />
+                <path
+                    d="M1.00001 24.9422C0.999987 88.4422 1.00001 110.942 1.00001 110.942M1.00001 24.9422C1.00003 -38.5577 58.5 39.9422 76.5 79.4422C94.5 118.942 147.5 69.9422 176 50.4422C204.5 30.9422 192.828 73.7132 209 79.4422C237.744 89.6249 259 86.4422 281.5 50.4422C304 14.4422 329.991 76.3616 361.5 69.9422C384.638 65.2282 392.089 48.746 414 39.9422C437.115 30.6548 476 53.4422 476 24.9422C476 -3.55778 523.235 80.1028 558.5 69.9422C582.514 63.0231 580.311 32.9052 604 24.9422C635.611 14.3161 652.966 43.1133 685.5 50.4422C748.108 64.5458 733.5 97.4422 849.5 60.9422C965.5 24.4422 754.5 60.9422 866 24.9422C977.5 -11.0578 1050 36.9423 979 50.4422C979 50.4422 979 97.4422 1042.5 97.4422C1106 97.4422 1051.69 54.3822 1072.5 39.9422C1107.23 15.8427 1134.66 75.9643 1176.5 69.9422C1204.7 65.8833 1214.61 42.294 1243 39.9422C1277.9 37.0516 1292.61 66.9728 1327.5 69.9422C1373.56 73.8619 1442 -6.55775 1442 39.9422M1.00001 24.9422V110.942M1.00001 110.942H1442M1442 110.942C1442 110.942 1442 86.4422 1442 39.9422M1442 110.942V39.9422"
+                    stroke="white" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="alert-cls active"></div>
+        <div class="loading-page">
+            <h1>Loading...</h1>
+        </div>
+        <div class="full-result active">
+            <!--  Current temperature result div  -->
+            <div class="container result-div">
+
+            </div>
+            <!--  Fluid div for heading banner-->
+            <div class="container" style="padding: 5px 0;color: white;background-color: #007bff;">
+                <h1>Weather forcast for next 8 days</h1>
+            </div>
+            <!--  Weather for further days-->
+            <div class="bg-5">
+                <div class="wrapper-5">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <span>&copy;Copyright reserved by Ananthu SV</span>
+        </div>
+    </div>
+    <script src="./api.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

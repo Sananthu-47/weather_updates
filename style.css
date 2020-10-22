@@ -1,0 +1,350 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0A2733;
+}
+
+:root
+{
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 20%;
+    padding: 0;
+    background-color: #38AADB;
+    text-align: center;
+}
+
+.logo-wraper
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+}
+
+.weather-logo
+{
+    color: white;
+    margin-right: 10px;
+}
+
+.updates-logo
+{
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+.tagline
+{
+    text-align: center;
+    margin-top: 30px;
+    color: #eee;
+}
+
+.change-weather
+{
+    margin: 20px 0;
+    color: white;
+    background-color: rgb(233, 120, 120);
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-div
+{
+    min-width: 100px;
+    height: 30px;
+    background-color: dodgerblue;
+}
+
+.select-div select option
+{
+    background-color: rgb(3, 77, 151);
+}
+
+.select-div select
+{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+}
+
+.input-wrapper
+{
+    width: 80%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    margin: auto;
+}
+
+#input-field
+{
+    min-width: 170px;
+    width: 35%;
+    max-width: 35%;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 20px;
+    box-shadow: 4px 4px 8px #878787;
+}
+
+#input-field::placeholder
+{
+    font-size: 16px;
+}
+
+.search
+{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-search
+{
+    color: white;
+    font-size: 24px;
+}
+
+.svg-wrapper
+{
+    position: relative;
+    width: 100%;
+    height: 112px;
+    margin-top: 60px;
+}
+
+.svg-wrapper .wave
+{
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    bottom: 0;
+}
+
+.result-div
+{
+    background-color: transparent;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper
+{
+    width: 100%;
+    min-height: 20%;
+}
+
+.loading-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(139, 197, 224, 0.5);
+    max-width: 200px;
+    height: 60px;
+    color: black;
+    margin: 20px auto;
+}
+
+.active
+{
+    display: none;
+}
+
+.full-result
+{
+    width: 100%;
+    min-height: 20%;
+}
+
+.result-body
+{
+    position: relative;
+    width: 300px;
+    height: fit-content;
+    background-color: #00A3FF;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 20px;
+    left: -40px;
+    color: rgb(11, 34, 63);
+    line-height: 30px;
+}
+
+.alert-cls
+{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(231, 35, 35);
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 50px 0;
+    animation: alertAnime .3s linear;
+}
+
+@keyframes alertAnime
+{
+    from{width: 200px;}
+    to{height: 100%;}
+}
+
+.icon
+{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.wrapper-5
+{
+    position: relative;
+    padding: 20px;
+    max-width: fit-content;
+    margin: 50px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    background-color: rgb(78, 109, 128);
+    height: 320px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.card
+{
+    min-width: 200px;
+    max-width: 250px;
+    height: 300px;
+    background-color: #08141D;
+    border-radius: 30px;
+    margin:0  20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.d-flex
+{
+    display: flex;
+    background-color: grey;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+}
+
+#temp
+{
+    font-size: 26px;
+}
+
+.bg-5
+{
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper .footer
+{
+    position: relative;
+    bottom: 0;
+    background-color: #181717;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+
+
+
+@media only screen and (max-width:450px)
+{
+    .weather-logo , .updates-logo
+    {
+        font-size: 26px;
+    }
+    #input-field
+    {
+        width: 80%;
+        height: 40px;
+    }
+    .fa-search
+    {
+        font-size: 18px;
+    }
+    .search
+    {
+        width: 40px;
+        height: 40px;
+    }
+    #input-field::placeholder
+    {
+        font-size: 14px;
+    }
+    .standing-img
+    {
+        display: none;
+    }
+    .result-body
+    {
+        position: relative;
+        left: 0;
+    }
+    .card{
+        margin:0  10px;
+    }
+    .alert-cls
+    {
+        font-size: 12px;
+    }
+    .change-weather
+    {
+        width: fit-content;
+        height: fit-content;
+    }
+    .select-div select{
+        font-size: 16px;
+    }
+    .wrapper-5
+    {
+        margin: 10px;
+    }
+}
+
